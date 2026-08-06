@@ -1,24 +1,26 @@
-# OpenCV Learning Notes
+# OpenCV 学习笔记
 
-Python OpenCV learning exercises, progressing from basic image and video operations to common image-processing techniques.
+使用 Python 学习 OpenCV 的练习代码，从基础图像与视频操作逐步过渡到常用图像处理方法。
 
-## Topics
+## 学习内容
 
-- Image reading, display, and saving
-- Video frame reading and frame export
-- Regions of interest (ROI)
-- Image arithmetic and alpha blending
-- Border padding and normalization
-- Thresholding and smoothing filters
+- 图像的读取、显示与保存
+- 视频读取与逐帧导出
+- 感兴趣区域（ROI）
+- 图像加减与透明叠加
+- 边界填充与归一化
+- 图像阈值与平滑滤波
 
-## Requirements
+## 环境要求
 
 - Python 3
 - OpenCV Contrib 5.0.0
 - NumPy
 - Matplotlib
 
-## Setup
+## 安装
+
+在 PowerShell 中执行：
 
 ```powershell
 python -m venv .venv
@@ -27,7 +29,7 @@ python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
-## Run an Example
+## 运行示例
 
 ```powershell
 python read_image.py
@@ -35,15 +37,15 @@ python read_video.py
 python threshold_smoothing.py
 ```
 
-## Project Layout
+## 目录说明
 
 ```text
-images/     Input images used by the examples
-videos/     Input videos used by the examples
-*.py        Learning scripts
-output/     Generated results (ignored by Git)
+images/     示例输入图像
+videos/     示例输入视频
+*.py        学习脚本
+output/     程序生成结果（Git 不跟踪）
 ```
 
-## Notes
+## 说明
 
-OpenCV reads color images in BGR channel order by default.
+OpenCV 默认以 BGR 通道顺序读取彩色图像。
