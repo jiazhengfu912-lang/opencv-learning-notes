@@ -1,69 +1,72 @@
 # OpenCV 学习笔记
 
-这是一个使用 Python 学习 OpenCV 的中文入门仓库。仓库保留了可直接运行的示例代码，并新增按学习顺序编排的理论章节，适合边运行、边理解、边复习。
+使用 Python 学习 OpenCV 的可运行示例。每个脚本聚焦一个概念，按下面的顺序学习即可。
 
-## 从教材开始
+## 学习导航
 
-从 [OpenCV 初学者教材目录](docs/README.md) 进入。建议按章节顺序学习：先读理论和图示，再打开对应脚本运行、修改参数并观察变化。
+| 阶段 | 示例 | 内容 |
+|---|---|---|
+| 1 | [read_image.py](read_image.py) | 读取、显示图像，理解 `shape` 与 BGR 图像数据。 |
+| 2 | [read_video.py](read_video.py) | 循环读取视频帧、灰度化、按 `q` 退出。 |
+| 3 | [video_write.py](video_write.py) | 将视频逐帧保存为 BGR 图和灰度图。 |
+| 4 | [ROI_example.py](ROI_example.py) | 使用坐标和 NumPy 切片提取黑猫 ROI。 |
+| 5 | [numeric_basics.py](numeric_basics.py) | 查看像素、ROI 均值、亮度和对比度。 |
+| 6 | [image_math.py](image_math.py) | 使用饱和加法和减法改变图像亮度。 |
+| 7 | [image_add.py](image_add.py) | 使用 `addWeighted()` 实现半透明 ROI 叠加。 |
+| 8 | [border_padding.py](border_padding.py) | 对比常量、复制和镜像边界填充。 |
+| 9 | [threshold_smoothing.py](threshold_smoothing.py) | 均值、高斯、中值平滑与固定/Otsu 阈值。 |
+| 10 | [erosion.py](erosion.py) | 腐蚀：缩小白色前景并去除小白点。 |
+| 11 | [dilation.py](dilation.py) | 膨胀：扩大白色前景并填补小黑缝。 |
+| 12 | [opening_closing.py](opening_closing.py) | 开运算去白点，闭运算填黑洞。 |
+| 13 | [morphology_features.py](morphology_features.py) | 形态学梯度、礼帽和黑帽。 |
+| 14 | [gradient_operators.py](gradient_operators.py) | Sobel、Scharr 与 Laplacian 梯度算子。 |
+| 15 | [Canny_test.py](Canny_test.py) | 高斯滤波与 Canny 边缘检测。 |
 
-## 学习地图
+GitHub 会将表格中的相对链接渲染为可点击链接。例如，点击 [read_video.py](read_video.py) 会打开视频读取示例。
 
-| 章节 | 主题 | 对应代码 |
-| --- | --- | --- |
-| [01](docs/01-image-basics.md) | 图像基础：矩阵、像素、BGR | [read_image.py](read_image.py) |
-| [02](docs/02-video-processing.md) | 视频读取与逐帧保存 | [read_video.py](read_video.py)、[video_write.py](video_write.py) |
-| [03](docs/03-roi-and-overlay.md) | ROI、矩形标记、透明叠加 | [ROI_example.py](ROI_example.py)、[image_add.py](image_add.py) |
-| [04](docs/04-numerical-operations.md) | 数值运算、亮度、对比度、归一化 | [numeric_basics.py](numeric_basics.py)、[image_math.py](image_math.py) |
-| [05](docs/05-preprocessing.md) | 边界填充、平滑、阈值 | [border_padding.py](border_padding.py)、[threshold_smoothing.py](threshold_smoothing.py) |
-| [06](docs/06-morphology-basics.md) | 腐蚀、膨胀、开运算、闭运算 | [erosion.py](erosion.py)、[dilation.py](dilation.py)、[opening_closing.py](opening_closing.py) |
-| [07](docs/07-morphological-features.md) | 形态学梯度、礼帽、黑帽 | [morphology_features.py](morphology_features.py) |
-| [08](docs/08-image-gradients.md) | Sobel、Scharr、Laplacian 梯度 | [gradient_operators.py](gradient_operators.py) |
+## 理论教材
+
+从 [OpenCV 初学者教材目录](docs/README.md) 进入。上方“阶段”按脚本顺序编号；教材按主题合并多个脚本，因此第 15 个脚本对应第 09 个章节。[第 09 章：Canny 边缘检测](docs/09-canny-edge-detection.md) 将梯度计算、非极大值抑制、双阈值检测和边缘连接与 [Canny_test.py](Canny_test.py) 对应起来。
 
 ## 环境要求
 
-- Python 3.10 或更高版本
-- OpenCV：`opencv-python`
-- NumPy：`numpy`
-- Matplotlib：`matplotlib`
-- VS Code + Python 扩展
+- Python 3
+- OpenCV Contrib 5.0.0
+- NumPy
+- Matplotlib
 
-## 安装与运行
+## 安装
 
 在项目根目录打开 PowerShell：
 
 ```powershell
 python -m venv .venv
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
 .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
-python -m pip install opencv-python numpy matplotlib
+python -m pip install -r requirements.txt
 ```
 
-激活虚拟环境后，运行任意示例：
+## 运行示例
+
+例如运行视频读取示例：
 
 ```powershell
-python read_image.py
-python threshold_smoothing.py
+python read_video.py
 ```
 
-如果 VS Code 没有使用虚拟环境：按 `Ctrl+Shift+P`，选择 `Python: Select Interpreter`，再选择项目中的 `.venv\Scripts\python.exe`。
+所有脚本都应在项目根目录 `D:\OpenCV_Learning` 中运行，以确保相对路径能找到 `images/` 和 `videos/`。
 
 ## 目录说明
 
 ```text
-.
-├── docs/                 # 中文理论教材与学习导航
-├── images/               # 示例图片
-├── videos/               # 示例视频
-├── output/               # 脚本运行生成的结果（已忽略）
-├── *.py                  # 14 个可运行的 OpenCV 示例
-└── README.md             # 仓库首页
+images/     示例输入图像
+videos/     示例输入视频
+*.py        按学习主题编写的可运行脚本
+output/     程序生成结果，已由 Git 忽略
 ```
 
-## 代码约定
+## 约定
 
-- 脚本在项目根目录运行，相对路径以根目录为基准。
-- 图像默认以 BGR 顺序读入；显示、保存和处理时应注意颜色空间。
-- 图像读取失败会主动退出并显示提示。
-- 视频窗口中按 `q` 可退出播放。
-- `output/` 是生成结果，不提交到 Git。
+- OpenCV 默认以 BGR 通道顺序读取彩色图像。
+- 变量名、路径和运行输出使用英文；代码注释使用中文。
+- 形态学示例中，通常将待分析的暗色目标转换为白色前景。

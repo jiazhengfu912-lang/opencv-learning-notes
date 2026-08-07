@@ -1,6 +1,6 @@
 # 08 图像梯度算子：Sobel、Scharr 与 Laplacian
 
-[上一章：形态学特征](07-morphological-features.md) · [教材目录](README.md) · [返回仓库首页](../README.md)
+[上一章：形态学特征](07-morphological-features.md) · [教材目录](README.md) · [下一章：Canny 边缘检测](09-canny-edge-detection.md)
 
 ## 学习目标与前置知识
 
@@ -93,4 +93,4 @@ sobel_magnitude = cv2.magnitude(sobel_x, sobel_y)
 梯度会放大快速变化，噪声也是快速变化；先平滑可以减少噪声被误检为边缘。
 </details>
 
-[上一章：形态学特征](07-morphological-features.md) · [教材目录](README.md) · [返回仓库首页](../README.md)
+[上一章：形态学特征](07-morphological-features.md) · [教材目录](README.md) · [下一章：Canny 边缘检测](09-canny-edge-detection.md)
