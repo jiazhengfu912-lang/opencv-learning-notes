@@ -1,13 +1,16 @@
 import cv2
 
+# 按相对路径读取 BGR 彩色图像
 image = cv2.imread("images/test.jpg")
 
 if image is None:
-    print("图片读取失败：请检查图片路径和文件名")
-else:
-    print("图片尺寸：(高，宽，通道数)：",image.shape)
+    print("Image read failed")
+    raise SystemExit
 
-    cv2.imshow("My Image",image)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
+# shape 的顺序为：高度、宽度、通道数
+print("Image shape:", image.shape)
 
+# 显示图像；按任意键后关闭窗口
+cv2.imshow("Image", image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
