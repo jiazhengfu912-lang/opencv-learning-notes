@@ -88,4 +88,14 @@ python opening_closing.py
 二值图的前景和背景明确，腐蚀、膨胀的形状变化更容易控制和解释。
 </details>
 
+## 运行结果
+
+三个拼图分别对比二值图与腐蚀、膨胀、开运算和闭运算结果。示例中深色主体经过反向阈值后成为白色前景。
+
+![erosion.py 的运行结果](results/erosion.jpg)
+
+![dilation.py 的运行结果](results/dilation.jpg)
+
+![opening_closing.py 的运行结果](results/opening_closing.jpg)
+
 [上一章：预处理](05-preprocessing.md) · [教材目录](README.md) · [下一章：形态学特征](07-morphological-features.md)

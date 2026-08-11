@@ -89,4 +89,12 @@ python threshold_smoothing.py
 因为最终阈值由 Otsu 根据图像直方图自动计算，手写的固定阈值不会作为最终阈值使用。
 </details>
 
+## 运行结果
+
+第一个拼图比较三种边界填充；第二个拼图按处理顺序展示灰度化、三种平滑、固定阈值、反向阈值和 Otsu 阈值结果。
+
+![border_padding.py 的运行结果](results/border_padding.jpg)
+
+![threshold_smoothing.py 的运行结果](results/threshold_smoothing.jpg)
+
 [上一章：数值运算](04-numerical-operations.md) · [教材目录](README.md) · [下一章：形态学基础](06-morphology-basics.md)

@@ -95,4 +95,10 @@ NumPy 二维数组先按行索引，再按列索引；行对应 y，列对应 x�
 蓝色，因为第一个通道是 B（Blue）。
 </details>
 
+## 运行结果
+
+`read_image.py` 显示读取到的原始 BGR 图像。
+
+![read_image.py 的运行结果](results/read_image.jpg)
+
 [教材目录](README.md) · [下一章：视频读取与处理](02-video-processing.md)

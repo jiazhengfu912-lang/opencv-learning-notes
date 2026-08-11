@@ -2,7 +2,7 @@
 
 [返回仓库首页](../README.md)
 
-这套章节围绕仓库中已经存在的 15 个脚本编写。每一章都遵循同一条路线：理解概念 → 运行代码 → 调整参数 → 回答自测题。
+这套章节围绕仓库中已经存在的 19 个脚本编写。每一章都遵循同一条路线：理解概念 → 运行代码 → 调整参数 → 查看运行结果 → 回答自测题。
 
 ## 推荐学习方式
 
@@ -24,10 +24,13 @@
 | 07 | [形态学特征](07-morphological-features.md) | [morphology_features.py](../morphology_features.py) |
 | 08 | [图像梯度算子](08-image-gradients.md) | [gradient_operators.py](../gradient_operators.py) |
 | 09 | [Canny 边缘检测](09-canny-edge-detection.md) | [Canny_test.py](../Canny_test.py) |
+| 10 | [轮廓与几何特征](10-contours-and-geometry.md) | [edge_contour_compare.py](../edge_contour_compare.py)、[contour_geometry.py](../contour_geometry.py) |
+| 11 | [模板匹配](11-template-matching.md) | [template_matching.py](../template_matching.py) |
+| 12 | [灰度直方图](12-gray-histogram.md) | [histogram_gray.py](../histogram_gray.py) |
 
 ## 当前学习位置
 
-完成一章后，除最后一章外可使用章节底部的“上一章 / 下一章”继续；最后一章可返回本目录或仓库首页。需要复习时，可以先从本页进入目标章节，再跳转到对应脚本定位实现。
+完成一章后，除最后一章外可使用章节底部的“上一章 / 下一章”继续；最后一章可返回本目录或仓库首页。每章末尾的运行结果拼图包含该脚本全部 `imshow` 窗口；视频示例使用首帧作为静态代表。需要复习时，可以先从本页进入目标章节，再跳转到对应脚本定位实现。
 
 ## 运行前准备
 

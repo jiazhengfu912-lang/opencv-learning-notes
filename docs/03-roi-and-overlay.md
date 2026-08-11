@@ -93,4 +93,12 @@ OpenCV 颜色顺序是 BGR，三个值分别为蓝 0、绿 255、红 0。
 由两个输入图像的权重 `alpha` 与 `beta` 控制；常见情况下两者之和为 1。
 </details>
 
+## 运行结果
+
+第一个拼图显示原图与裁剪 ROI；第二个拼图显示半透明绿色 ROI 覆盖层与原图的混合结果。
+
+![ROI_example.py 的运行结果](results/ROI_example.jpg)
+
+![image_add.py 的运行结果](results/image_add.jpg)
+
 [上一章：视频读取与处理](02-video-processing.md) · [教材目录](README.md) · [下一章：数值运算](04-numerical-operations.md)

@@ -93,4 +93,12 @@ python image_math.py
 不会。归一化只重新分配已有像素值的范围。
 </details>
 
+## 运行结果
+
+第一个拼图对比原图、增加亮度和提高对比度；第二个拼图对比 OpenCV 饱和加法与饱和减法。
+
+![numeric_basics.py 的运行结果](results/numeric_basics.jpg)
+
+![image_math.py 的运行结果](results/image_math.jpg)
+
 [上一章：ROI 与图像叠加](03-roi-and-overlay.md) · [教材目录](README.md) · [下一章：预处理](05-preprocessing.md)

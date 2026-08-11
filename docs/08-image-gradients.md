@@ -93,4 +93,10 @@ sobel_magnitude = cv2.magnitude(sobel_x, sobel_y)
 梯度会放大快速变化，噪声也是快速变化；先平滑可以减少噪声被误检为边缘。
 </details>
 
+## 运行结果
+
+拼图依次展示灰度图、Sobel X/Y、Sobel 幅值、Scharr 幅值和 Laplacian 结果。
+
+![gradient_operators.py 的运行结果](results/gradient_operators.jpg)
+
 [上一章：形态学特征](07-morphological-features.md) · [教材目录](README.md) · [下一章：Canny 边缘检测](09-canny-edge-detection.md)

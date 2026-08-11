@@ -78,4 +78,10 @@ python morphology_features.py
 会改变“背景”和“小亮细节”的尺度划分；更大的核可忽略更大范围的平滑背景，但也可能带来更多背景变化。
 </details>
 
+## 运行结果
+
+拼图依次展示灰度图、形态学梯度、礼帽和黑帽的结果。
+
+![morphology_features.py 的运行结果](results/morphology_features.jpg)
+
 [上一章：形态学基础](06-morphology-basics.md) · [教材目录](README.md) · [下一章：图像梯度算子](08-image-gradients.md)

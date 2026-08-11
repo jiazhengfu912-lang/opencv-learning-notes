@@ -1,6 +1,6 @@
 # 09 Canny 边缘检测
 
-[上一章：图像梯度算子](08-image-gradients.md) · [教材目录](README.md) · [返回仓库首页](../README.md)
+[上一章：图像梯度算子](08-image-gradients.md) · [教材目录](README.md) · [下一章：轮廓与几何特征](10-contours-and-geometry.md)
 
 ## 学习目标与前置知识
 
@@ -129,4 +129,10 @@ edges = cv2.Canny(blur, 50, 150)
 会检测到更多边缘，但更容易把纹理和噪声保留为伪边缘；实际效果取决于图像对比度和噪声程度。
 </details>
 
-[上一章：图像梯度算子](08-image-gradients.md) · [教材目录](README.md) · [返回仓库首页](../README.md)
+## 运行结果
+
+拼图展示原始图和 Canny 最终输出的二值边缘图。
+
+![Canny_test.py 的运行结果](results/Canny_test.jpg)
+
+[上一章：图像梯度算子](08-image-gradients.md) · [教材目录](README.md) · [下一章：轮廓与几何特征](10-contours-and-geometry.md)

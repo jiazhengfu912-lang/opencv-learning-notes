@@ -21,12 +21,16 @@
 | 13 | [morphology_features.py](morphology_features.py) | 形态学梯度、礼帽和黑帽。 |
 | 14 | [gradient_operators.py](gradient_operators.py) | Sobel、Scharr 与 Laplacian 梯度算子。 |
 | 15 | [Canny_test.py](Canny_test.py) | 高斯滤波与 Canny 边缘检测。 |
+| 16 | [edge_contour_compare.py](edge_contour_compare.py) | 对比 Canny 边缘图、二值前景与轮廓。 |
+| 17 | [contour_geometry.py](contour_geometry.py) | 轮廓面积、边界矩形、最小旋转矩形与轮廓近似。 |
+| 18 | [template_matching.py](template_matching.py) | 使用归一化相关系数进行基础模板匹配。 |
+| 19 | [histogram_gray.py](histogram_gray.py) | 灰度直方图统计与可视化。 |
 
 GitHub 会将表格中的相对链接渲染为可点击链接。例如，点击 [read_video.py](read_video.py) 会打开视频读取示例。
 
 ## 理论教材
 
-从 [OpenCV 初学者教材目录](docs/README.md) 进入。上方“阶段”按脚本顺序编号；教材按主题合并多个脚本，因此第 15 个脚本对应第 09 个章节。[第 09 章：Canny 边缘检测](docs/09-canny-edge-detection.md) 将梯度计算、非极大值抑制、双阈值检测和边缘连接与 [Canny_test.py](Canny_test.py) 对应起来。
+从 [OpenCV 初学者教材目录](docs/README.md) 进入。上方“阶段”按脚本顺序编号；教材按主题合并多个脚本，因此脚本编号与章节编号不一定相同。每个教材章节底部都嵌入了对应脚本的运行结果拼图，GitHub 可以直接查看，无需运行程序。
 
 ## 环境要求
 

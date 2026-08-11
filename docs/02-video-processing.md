@@ -90,4 +90,12 @@ gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 视频读取到的 `frame` 默认是 BGR 三通道；灰度帧需要按颜色权重转换为单通道图像。
 </details>
 
+## 运行结果
+
+`read_video.py` 的拼图展示视频首帧的原始 BGR 图和灰度图；`video_write.py` 不使用窗口，拼图展示其逐帧保存的首张 BGR 与灰度结果。
+
+![read_video.py 的运行结果](results/read_video.jpg)
+
+![video_write.py 的首帧保存结果](results/video_write.jpg)
+
 [上一章：图像基础](01-image-basics.md) · [教材目录](README.md) · [下一章：ROI 与图像叠加](03-roi-and-overlay.md)
