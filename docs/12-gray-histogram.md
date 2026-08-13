@@ -31,6 +31,17 @@ y axis: number of pixels with that gray value
 
 本例以 256 个 bin 统计 8 位灰度图，因此每个 bin 对应一个灰度值。
 
+## 图形化理解
+
+| 暗图的灰度分布 | 亮图的灰度分布 |
+| --- | --- |
+| ![OpenCV 暗图直方图示意](assets/opencv/histogram-theory-dark.jpg) | ![OpenCV 亮图直方图示意](assets/opencv/histogram-theory-bright.jpg) |
+| 像素值集中在靠近 0 的左侧，视觉上更暗。 | 像素值集中在靠近 255 的右侧，视觉上更亮。 |
+
+直方图只回答“每个灰度出现了多少次”，不告诉你这些像素在哪里。因此两张位置结构完全不同的图片，仍可能有相似的直方图。观察时先看峰的位置（亮或暗），再看分布宽度（对比度范围），最后看是否有两个分离峰（可能适合阈值分割）。
+
+图：OpenCV 官方直方图教程示例图，Apache-2.0；本地来源映射见 [配图来源清单](assets/SOURCES.md)。
+
 ## 对应实践
 
 对应脚本：[灰度直方图示例](../histogram_gray.py)

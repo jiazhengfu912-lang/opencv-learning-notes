@@ -70,6 +70,19 @@ drop   weak   strong weak   drop
 
 最后的边缘连接（hysteresis）会检查弱边缘的 8 邻域：能通过相邻弱边缘连到强边缘的部分被保留；孤立的弱边缘被删除。单阈值容易在“噪声很多”和“边缘断裂”之间二选一，双阈值则同时控制这两个问题。
 
+## 图形化理解
+
+| 非极大值抑制（NMS） | 双阈值与滞后连接 |
+| --- | --- |
+| ![OpenCV Canny NMS 方向比较图](assets/opencv/canny-nms.jpg) | ![OpenCV Canny 双阈值连接图](assets/opencv/canny-hysteresis.jpg) |
+| A 是当前候选边缘点；沿梯度方向只与 B、C 比较。若 A 不是三者中最大值，A 被压为 0。 | 强边缘直接保留；弱边缘只有与强边缘连通时才保留，否则丢弃。 |
+
+左图最关键的关系是：梯度方向与边缘方向垂直。NMS 不比较“沿边缘方向”的邻居，而是比较跨过边缘的两个邻居，这样才能把宽而模糊的响应压成一条细线。
+
+右图解释为什么要使用两个阈值：只用高阈值容易使真实边缘断裂；只用低阈值又会留下很多噪声。`cv2.Canny(blur, low, high)` 把中间分数的像素称为弱边缘，并只让它们在连接到强边缘时生效。
+
+图：OpenCV 官方 Canny 教程示例图，Apache-2.0；本地来源映射见 [配图来源清单](assets/SOURCES.md)，进一步阅读 [OpenCV Canny Edge Detection](https://docs.opencv.org/4.x/da/d22/tutorial_py_canny.html)。
+
 ## 对应实践
 
 对应脚本：[Canny 边缘检测示例](../Canny_test.py)

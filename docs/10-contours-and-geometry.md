@@ -35,6 +35,19 @@ $$epsilon = rate \times perimeter$$
 
 `rate` 越小，近似线条越贴近真实边界；过小则会保留像素锯齿。多个相互接触的圆在二值图中会连成一个前景区域，降低 `epsilon` 不能把它们自动分开。
 
+## 图形化理解
+
+| 轮廓结果 | 最小旋转矩形结果 |
+| --- | --- |
+| ![OpenCV 轮廓检测结果](assets/opencv/contours-result.jpg) | ![OpenCV 旋转矩形结果](assets/opencv/rotated-rect-result.jpg) |
+| `findContours()` 从二值前景的边界提取点集。 | `minAreaRect()` 允许矩形旋转，因此能更贴合倾斜目标。 |
+
+左图强调轮廓不是“所有边缘像素”，而是围绕一个二值前景区域组织起来的边界点集合。右图中，目标倾斜时，水平的 `boundingRect()` 往往留出较多空白；最小旋转矩形会跟随目标角度，面积通常更紧凑。
+
+轮廓近似则是在已有轮廓点集上做简化：`epsilon` 小时保留更多顶点，贴合程度提高；`epsilon` 大时顶点变少，形状更概括。它并不改变图中“哪些区域本来粘在一起”的连通关系。
+
+图：OpenCV 官方 Shape Descriptors 教程示例图，Apache-2.0；本地来源映射见 [配图来源清单](assets/SOURCES.md)。
+
 ## 对应实践
 
 对应脚本：[边缘与轮廓对比](../edge_contour_compare.py) · [轮廓几何示例](../contour_geometry.py)

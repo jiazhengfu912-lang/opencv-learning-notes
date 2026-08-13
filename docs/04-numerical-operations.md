@@ -42,6 +42,16 @@ $$p' = \frac{p - min}{max - min} \times 255$$
 
 它常用于让不同图像或不同处理中得到的数值更容易比较和显示。
 
+## 图形化理解
+
+![亮度和对比度的线性变换](assets/linear-transform.svg)
+
+图中的灰阶条表示从黑到白的像素范围。`alpha` 会拉伸或压缩灰阶之间的距离：`alpha > 1` 时，暗处更暗、亮处更亮，所以对比度增加；`0 < alpha < 1` 时，差异被压缩。
+
+`beta` 则把整条灰阶一起向亮端或暗端平移。实际 `uint8` 图像不能超过 0 到 255，因此 OpenCV 的饱和运算会把越界值截到 0 或 255；这也是 `cv2.add()` 与 NumPy 的 `uint8` 加法需要区分的原因。
+
+图：本仓库绘制的概念图。线性变换公式和饱和处理可对照 [OpenCV 官方亮度与对比度教程](https://docs.opencv.org/4.x/d3/dc1/tutorial_basic_linear_transform.html)。
+
 ## 对应实践
 
 对应脚本：[数值基础示例](../numeric_basics.py) · [图像加减示例](../image_math.py)

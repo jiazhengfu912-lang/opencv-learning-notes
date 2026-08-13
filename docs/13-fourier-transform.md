@@ -41,6 +41,16 @@ magnitude = 20 * np.log1p(np.abs(shifted))
 
 `np.abs()` 取幅度；`log1p` 压缩极大的数值范围，使低频和高频都能在同一张图上看清。
 
+## 图形化理解
+
+![OpenCV 傅里叶变换输入图与对数幅度频谱示例](assets/opencv/fourier-spectrum.jpg)
+
+频谱图与原图并排时，左边仍是空间域像素，右边则显示“不同频率成分的强弱”。`fftshift()` 之后，中央最亮区域对应低频（平均亮度和缓慢变化）；离中心越远，对应越快的亮度变化，如边缘、纹理和噪声。
+
+频谱左右、上下经常成对对称，这是实值灰度图 FFT 的正常性质。图中的亮点和亮线不是“物体位置”，而是重复方向、纹理周期等频率特征；例如密集的水平纹理会让垂直频率方向更突出。
+
+图：OpenCV 官方傅里叶变换教程示例图，Apache-2.0；本地来源映射见 [配图来源清单](assets/SOURCES.md)，可继续阅读 [OpenCV Fourier Transform](https://docs.opencv.org/4.x/de/dbc/tutorial_py_fourier_transform.html)。
+
 ### 圆形掩膜
 
 本章以图像中心为圆心、`cutoff` 为半径创建两张掩膜：

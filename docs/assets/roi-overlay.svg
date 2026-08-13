@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="310" viewBox="0 0 760 310" role="img" aria-labelledby="title desc">
+  <title id="title">ROI extraction and transparent overlay</title>
+  <desc id="desc">A rectangular region of interest is selected from a complete image, then highlighted on an overlay before blending.</desc>
+  <rect width="760" height="310" fill="#f8fafc"/>
+  <text x="32" y="38" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1e293b">ROI: focus processing on one region</text>
+  <g transform="translate(40 68)">
+    <rect width="255" height="178" rx="10" fill="#c7d2fe" stroke="#6366f1" stroke-width="3"/>
+    <circle cx="70" cy="60" r="26" fill="#fbbf24"/><path d="M0 178L80 80L142 150L190 98L255 178Z" fill="#4f46e5" opacity=".65"/>
+    <rect x="98" y="50" width="108" height="77" fill="#22c55e" opacity=".35" stroke="#15803d" stroke-width="4"/>
+    <text x="115" y="92" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#14532d">ROI</text>
+    <text x="80" y="203" font-family="Arial, sans-serif" font-size="16" fill="#475569">complete image</text>
+  </g>
+  <path d="M323 154H400" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+  <g transform="translate(436 78)">
+    <rect width="220" height="142" rx="10" fill="#c7d2fe" stroke="#6366f1" stroke-width="3"/>
+    <circle cx="60" cy="48" r="23" fill="#fbbf24"/><path d="M0 142L70 75L122 125L170 81L220 142Z" fill="#4f46e5" opacity=".65"/>
+    <rect x="82" y="42" width="93" height="63" fill="#22c55e" opacity=".52"/>
+    <text x="34" y="176" font-family="Arial, sans-serif" font-size="16" fill="#475569">overlay + original</text>
+    <text x="31" y="205" font-family="Consolas, monospace" font-size="15" fill="#1e293b">addWeighted()</text>
+  </g>
+  <text x="39" y="286" font-family="Consolas, monospace" font-size="17" fill="#334155">roi = image[y1:y2, x1:x2]</text>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/></marker></defs>
+</svg>

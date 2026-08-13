@@ -42,6 +42,16 @@ $$result = \alpha \cdot overlay + \beta \cdot image + \gamma$$
 
 本仓库中 `overlay` 起初是原图副本，绿色矩形画在该副本上，再与原图混合；不是两张完全不变的原图相加。
 
+## 图形化理解
+
+![从完整图像裁出 ROI，并在覆盖层上透明叠加](assets/roi-overlay.svg)
+
+左图中绿色矩形是 ROI。`image[y1:y2, x1:x2]` 会只取这个矩形内的数组数据；它并不会自动在原图上画出边框。要让人看到 ROI 的位置，需要额外调用 `cv2.rectangle()`。
+
+右图解释透明叠加：先把原图复制为 `overlay`，在副本上画绿色区域，最后用 `addWeighted()` 混合副本和原图。因此只有绿色区域被着色，背景仍保留原图信息。改变 `alpha` 会改变绿色层的可见程度。
+
+图：本仓库绘制的概念图。ROI 索引与图像混合可对照 [OpenCV 官方 ROI 说明](https://docs.opencv.org/4.x/d3/df2/tutorial_py_basic_ops.html) 和 [线性混合教程](https://docs.opencv.org/4.x/d5/dc4/tutorial_adding_images.html)。
+
 ## 对应实践
 
 对应脚本：[ROI 示例](../ROI_example.py) · [透明叠加示例](../image_add.py)

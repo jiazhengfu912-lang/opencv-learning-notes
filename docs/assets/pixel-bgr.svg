@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="300" viewBox="0 0 760 300" role="img" aria-labelledby="title desc">
+  <title id="title">Image matrix and BGR pixel channels</title>
+  <desc id="desc">A grid represents an image matrix. One selected pixel expands into blue green red channel values.</desc>
+  <rect width="760" height="300" fill="#f8fafc"/>
+  <text x="38" y="42" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1e293b">Image matrix</text>
+  <text x="38" y="70" font-family="Arial, sans-serif" font-size="16" fill="#475569">index with image[y, x]</text>
+  <g transform="translate(38 94)">
+    <rect width="210" height="150" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+    <g stroke="#cbd5e1" stroke-width="2">
+      <path d="M42 0V150M84 0V150M126 0V150M168 0V150"/>
+      <path d="M0 30H210M0 60H210M0 90H210M0 120H210"/>
+    </g>
+    <rect x="84" y="60" width="42" height="30" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+    <text x="90" y="81" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#78350f">y,x</text>
+  </g>
+  <path d="M270 170H370" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="284" y="152" font-family="Arial, sans-serif" font-size="16" fill="#475569">selected pixel</text>
+  <g transform="translate(410 70)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1e293b">image[y, x]</text>
+    <text x="0" y="28" font-family="Arial, sans-serif" font-size="18" fill="#475569">[B, G, R] = [60, 180, 240]</text>
+    <rect x="0" y="55" width="285" height="42" rx="7" fill="#2563eb"/>
+    <rect x="0" y="108" width="285" height="42" rx="7" fill="#16a34a"/>
+    <rect x="0" y="161" width="285" height="42" rx="7" fill="#dc2626"/>
+    <text x="15" y="83" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">B  Blue channel = 60</text>
+    <text x="15" y="136" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">G  Green channel = 180</text>
+    <text x="15" y="189" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">R  Red channel = 240</text>
+  </g>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/></marker></defs>
+</svg>

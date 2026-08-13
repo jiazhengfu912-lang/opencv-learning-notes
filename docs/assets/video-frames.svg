@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="270" viewBox="0 0 760 270" role="img" aria-labelledby="title desc">
+  <title id="title">Video is a time sequence of frames</title>
+  <desc id="desc">Four video frames are arranged along a timeline, with a read loop below them.</desc>
+  <rect width="760" height="270" fill="#f8fafc"/>
+  <text x="32" y="38" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1e293b">Video = frames ordered in time</text>
+  <g transform="translate(34 66)">
+    <g>
+      <rect width="138" height="94" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <circle cx="35" cy="42" r="16" fill="#fbbf24"/><path d="M0 83C25 52 83 52 138 75V94H0Z" fill="#60a5fa"/>
+      <text x="40" y="120" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#334155">frame 0</text>
+    </g>
+    <path d="M153 47H184" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)"/>
+    <g transform="translate(200)">
+      <rect width="138" height="94" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <circle cx="44" cy="42" r="16" fill="#fbbf24"/><path d="M0 83C30 52 92 52 138 75V94H0Z" fill="#60a5fa"/>
+      <text x="40" y="120" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#334155">frame 1</text>
+    </g>
+    <path d="M353 47H384" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)"/>
+    <g transform="translate(400)">
+      <rect width="138" height="94" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <circle cx="54" cy="42" r="16" fill="#fbbf24"/><path d="M0 83C35 52 99 52 138 75V94H0Z" fill="#60a5fa"/>
+      <text x="40" y="120" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#334155">frame 2</text>
+    </g>
+    <path d="M553 47H584" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)"/>
+    <g transform="translate(600)">
+      <rect width="92" height="94" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="3"/>
+      <text x="33" y="54" font-family="Arial, sans-serif" font-size="28" fill="#475569">…</text>
+      <text x="12" y="120" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#334155">frame N</text>
+    </g>
+  </g>
+  <rect x="175" y="210" width="410" height="38" rx="19" fill="#1e293b"/>
+  <text x="215" y="236" font-family="Consolas, monospace" font-size="16" fill="#ffffff">ret, frame = cap.read()</text>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/></marker></defs>
+</svg>

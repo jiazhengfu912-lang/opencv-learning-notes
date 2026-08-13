@@ -32,6 +32,16 @@ $$delay = \frac{1000}{F}\text{ ms}$$
 
 例如 30 FPS 对应约 33 ms。这个等待时间用于接近原播放速度；它不是图像处理本身的耗时。
 
+## 图形化理解
+
+![视频由按时间排列的多张图像帧组成](assets/video-frames.svg)
+
+视频不是一种“会动的特殊图片”，而是按时间顺序排列的许多普通图像。每调用一次 `cap.read()`，读取位置就向右移动一帧：成功时得到 `ret=True` 和一张 BGR `frame`；到达文件末尾时通常得到 `ret=False`，因此循环应退出。
+
+图中的相邻帧内容只有轻微变化。帧率为 $F$ 时，一帧在时间轴上大约占 $1/F$ 秒；因此 `waitKey(1000 / F)` 的作用是让“显示节奏”接近原视频，而不是保证算法恰好在该时间内完成。
+
+图：本仓库绘制的概念图。视频逐帧读取的接口可对照 [OpenCV 官方 VideoCapture 教程](https://docs.opencv.org/4.x/dd/d43/tutorial_py_video_display.html)。
+
 ## 对应实践
 
 对应脚本：[视频读取示例](../read_video.py) · [视频逐帧保存示例](../video_write.py)

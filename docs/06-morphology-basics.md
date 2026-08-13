@@ -36,6 +36,23 @@ $$closing = erosion(dilation(image))$$
 
 如果你的二值图中主体是黑色、背景是白色，那么你观察到的“白色变小”可能是黑色主体在视觉上变大；这不是函数出错，而是前景定义与观察颜色不同。
 
+## 图形化理解
+
+| 原始白色前景 | 腐蚀 | 膨胀 |
+| --- | --- | --- |
+| ![OpenCV 形态学原始白色前景](assets/opencv/morphology-theory-original.png) | ![OpenCV 腐蚀示意](assets/opencv/morphology-theory-erosion.png) | ![OpenCV 膨胀示意](assets/opencv/morphology-theory-dilation.png) |
+
+上表使用同一个白色字母来观察结构元素的影响：腐蚀要求核覆盖范围内都满足前景条件，因此白色笔画边界向内收缩；膨胀只要核覆盖范围内存在前景，就会把白色扩到周围。
+
+| 开运算 | 闭运算 |
+| --- | --- |
+| ![OpenCV 开运算示意](assets/opencv/morphology-opening.png) | ![OpenCV 闭运算示意](assets/opencv/morphology-closing.png) |
+| 先缩后扩：小白噪点难以恢复 | 先扩后缩：小黑洞容易被填平 |
+
+图中白色被当作前景。若你的二值图恰好相反，先用 `THRESH_BINARY_INV` 或 `cv2.bitwise_not()` 统一前景定义，再判断“变大”还是“变小”。
+
+图：OpenCV 官方形态学教程示例图，Apache-2.0；本地来源映射见 [配图来源清单](assets/SOURCES.md)，理论可进一步阅读 [OpenCV Morphological Transformations](https://docs.opencv.org/4.x/d9/d61/tutorial_py_morphological_ops.html)。
+
 ## 对应实践
 
 对应脚本：[腐蚀示例](../erosion.py) · [膨胀示例](../dilation.py) · [开闭运算示例](../opening_closing.py)
