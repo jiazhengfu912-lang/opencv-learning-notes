@@ -46,7 +46,7 @@ python dilation.py
 python opening_closing.py
 ```
 
-三个脚本均读取 `images/test.jpg`，转灰度、做高斯滤波和 Otsu 反向阈值，随后使用结构元素处理并显示、保存结果。`erosion.py` 与 `dilation.py` 使用 `5 × 5` 矩形结构元素；`opening_closing.py` 使用 `5 × 5` 椭圆结构元素。
+三个脚本均读取 `images/basics/test.jpg`，转灰度、做高斯滤波和 Otsu 反向阈值，随后使用结构元素处理并显示、保存结果。`erosion.py` 与 `dilation.py` 使用 `5 × 5` 矩形结构元素；`opening_closing.py` 使用 `5 × 5` 椭圆结构元素。
 
 ## 参数速查与常见误区
 

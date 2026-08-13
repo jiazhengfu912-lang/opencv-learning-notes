@@ -44,7 +44,7 @@ $$G = \sqrt{G_x^2 + G_y^2}$$
 python gradient_operators.py
 ```
 
-脚本先将 `images/test.jpg` 转灰度并做高斯滤波，再计算 Sobel X/Y 和幅值、Scharr X/Y 和幅值，以及 Laplacian。最终将结果转换为 8 位图显示并保存到 `output/`。
+脚本先将 `images/basics/test.jpg` 转灰度并做高斯滤波，再计算 Sobel X/Y 和幅值、Scharr X/Y 和幅值，以及 Laplacian。最终将结果转换为 8 位图显示并保存到 `output/`。
 
 核心调用关系：
 

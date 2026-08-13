@@ -2,14 +2,20 @@
 
 [返回学习路线首页](../README.md) · [从第一章开始](01-image-basics.md)
 
-根目录的 [README](../README.md) 用于快速了解学习路线、对应代码和运行结果入口；本页提供完整章节目录与学习方式。每个章节都围绕仓库中已有的 19 个脚本编写，遵循同一条路线：理解概念 → 运行代码 → 调整参数 → 查看运行结果 → 回答自测题。
+根目录的 [README](../README.md) 用于快速了解学习路线、对应代码和结果入口；本页提供完整教材目录与学习方式。当前教材包含 14 个章节、26 个学习脚本，按由基础到综合实战的顺序组织。
 
 ## 推荐学习方式
 
-1. 按 01–12 的顺序阅读，先理解“核心理论”和 ASCII 示意图。
-2. 点击章节内的脚本链接，在项目根目录运行示例。
-3. 每次只调整一个参数，例如核大小、阈值或权重，再比较输出。
-4. 查看章节末尾的运行结果拼图，并用复习卡确认自己能解释结果。
+1. 按 01 到 14 的顺序阅读，先理解“核心理论”和 ASCII 示意图。
+2. 点击章节中的脚本链接，在项目根目录运行对应示例。
+3. 每次只调整一个参数，例如阈值、核大小、权重或截止比例，再比较结果。
+4. 查看章节末尾的运行结果，再完成复习卡中的自测题。
+
+新增脚本可使用 `--save-only` 重新生成 `docs/results/` 中的结果图，不显示 OpenCV 或 Matplotlib 窗口：
+
+```powershell
+python fourier_filter.py --save-only
+```
 
 ## 教材目录
 
@@ -27,10 +33,16 @@
 | 10 | [轮廓与几何特征](10-contours-and-geometry.md) | [edge_contour_compare.py](../edge_contour_compare.py)、[contour_geometry.py](../contour_geometry.py) |
 | 11 | [模板匹配](11-template-matching.md) | [template_matching.py](../template_matching.py) |
 | 12 | [灰度直方图](12-gray-histogram.md) | [histogram_gray.py](../histogram_gray.py) |
+| 13 | [傅里叶变换与频域滤波](13-fourier-transform.md) | [fourier_filter.py](../fourier_filter.py) |
+| 14 | [银行卡号模板匹配实战](14-card-number-template-matching.md) | [6 个实战脚本](14-card-number-template-matching.md#对应实践) |
 
 ## 当前学习位置
 
-完成一章后，可使用章节底部的“上一章 / 下一章”继续学习；最后一章可返回本目录或 [学习路线首页](../README.md)。每章末尾的运行结果拼图包含该脚本的全部 `imshow` 窗口；视频示例使用首帧作为静态代表。
+完成一章后，使用章节底部的“上一章 / 下一章”继续学习；第 14 章完成后可返回本目录或 [学习路线首页](../README.md)。Harris 角点检测素材已整理到 `images/Harris/`，将在有配套代码和理论后加入教材。
+
+## 图片素材分类
+
+`images/` 按学习主题分类。脚本中使用的路径已同步更新；不要直接移动单张素材，否则对应示例会读取失败。详细目录说明见 [仓库首页](../README.md#图片目录分类)。
 
 ## 运行前准备
 

@@ -1,0 +1,6 @@
+card_01_clean.png	1234 5678 9012 3456	正面、清晰、高对比	Luhn-invalid demo number
+card_02_low_contrast.png	2468 1357 9024 6813	低对比度	Luhn-invalid demo number
+card_03_blur_noise.png	3141 5926 5358 9793	轻微模糊 + 噪声	Luhn-invalid demo number
+card_04_uneven_light.png	8080 7070 6060 5050	左暗右亮 + 局部高光	Luhn-invalid demo number
+card_05_rotated.png	4321 9876 5012 3456	旋转场景	Luhn-invalid demo number
+card_06_perspective.png	1122 3344 5566 7788	透视倾斜	Luhn-invalid demo number

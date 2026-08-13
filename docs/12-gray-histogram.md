@@ -1,6 +1,6 @@
 # 12 灰度直方图
 
-[上一章：模板匹配](11-template-matching.md) · [教材目录](README.md) · [返回仓库首页](../README.md)
+[上一章：模板匹配](11-template-matching.md) · [教材目录](README.md) · [下一章：傅里叶变换与频域滤波](13-fourier-transform.md)
 
 ## 学习目标与前置知识
 
@@ -89,4 +89,4 @@ hist = cv2.calcHist([gray], [0], None, [256], [0, 256])
 
 ![histogram_gray.py 的运行结果](results/histogram_gray.jpg)
 
-[上一章：模板匹配](11-template-matching.md) · [教材目录](README.md) · [返回仓库首页](../README.md)
+[上一章：模板匹配](11-template-matching.md) · [教材目录](README.md) · [下一章：傅里叶变换与频域滤波](13-fourier-transform.md)

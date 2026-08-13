@@ -47,7 +47,7 @@ image[y, x] = [blue, green, red]
 python read_image.py
 ```
 
-脚本从 `images/test.jpg` 读取图像，检查读取是否成功，随后输出图像尺寸并显示原图。可以在读取后加入：
+脚本从 `images/basics/test.jpg` 读取图像，检查读取是否成功，随后输出图像尺寸并显示原图。可以在读取后加入：
 
 ```python
 print(image.shape)
@@ -55,7 +55,7 @@ print(image.dtype)
 print(image[0, 0])
 ```
 
-输入是 `images/test.jpg`；输出是名为 `Image` 的窗口和终端中的图像信息。按任意键关闭窗口。
+输入是 `images/basics/test.jpg`；输出是名为 `Image` 的窗口和终端中的图像信息。按任意键关闭窗口。
 
 ## 参数速查与常见误区
 

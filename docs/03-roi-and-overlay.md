@@ -53,7 +53,7 @@ python image_add.py
 
 `ROI_example.py` 通过 `x1, y1, x2, y2` 定义范围，提取 ROI 并用矩形框标记原图。`image_add.py` 复制原图为 `overlay`，在其中的 ROI 位置画绿色实心矩形，再使用 `cv2.addWeighted` 与原图混合。
 
-输入均为 `images/test.jpg`；输出为窗口显示。
+输入均为 `images/basics/test.jpg`；输出为窗口显示。
 
 ## 参数速查与常见误区
 

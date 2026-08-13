@@ -1,7 +1,7 @@
 import cv2
 
 # 读取待搜索的大图
-source = cv2.imread("images/geometric_shapes.png")
+source = cv2.imread("images/geometry/geometric_shapes.png")
 
 if source is None:
     print("Source image read failed")

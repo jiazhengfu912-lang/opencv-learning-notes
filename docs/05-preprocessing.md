@@ -48,7 +48,7 @@ python threshold_smoothing.py
 
 `border_padding.py` 对同一图像分别应用 `BORDER_CONSTANT`、`BORDER_REPLICATE` 和 `BORDER_REFLECT_101` 并在窗口中对比。`threshold_smoothing.py` 先将图像转灰度并进行均值、高斯、中值滤波，再生成固定阈值、反向阈值和 Otsu 二值图。
 
-输入为 `images/test.jpg`。边界填充结果显示在窗口中；阈值与平滑结果同时显示并保存到 `output/threshold/`。
+输入为 `images/basics/test.jpg`。边界填充结果显示在窗口中；阈值与平滑结果同时显示并保存到 `output/threshold/`。
 
 ## 参数速查与常见误区
 

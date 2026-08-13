@@ -2,7 +2,7 @@ import cv2
 import matplotlib.pyplot as plt
 
 # 读取图像
-image = cv2.imread("images/lena_portrait.png")
+image = cv2.imread("images/frequency/lena_portrait.png")
 
 if image is None:
     print("Image read failed")

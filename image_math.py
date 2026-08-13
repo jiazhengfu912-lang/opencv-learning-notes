@@ -3,7 +3,7 @@ import numpy as np
 from pathlib import Path
 
 # 读取原始图像
-image = cv2.imread("images/test.jpg")
+image = cv2.imread("images/basics/test.jpg")
 
 if image is None:
     print("Image read failed")

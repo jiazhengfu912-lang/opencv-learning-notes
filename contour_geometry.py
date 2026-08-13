@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 # 读取规则几何图形
-image = cv2.imread("images/geometric_shapes.png")
+image = cv2.imread("images/geometry/geometric_shapes.png")
 
 if image is None:
     print("Image read failed")

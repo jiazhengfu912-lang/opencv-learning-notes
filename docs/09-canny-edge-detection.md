@@ -80,7 +80,7 @@ drop   weak   strong weak   drop
 python Canny_test.py
 ```
 
-脚本依次完成：读取 `images/test.jpg`、转换为灰度图、使用 `5 × 5` 高斯核降噪、调用 `cv2.Canny`，最后显示原始 BGR 图和二值边缘图。
+脚本依次完成：读取 `images/basics/test.jpg`、转换为灰度图、使用 `5 × 5` 高斯核降噪、调用 `cv2.Canny`，最后显示原始 BGR 图和二值边缘图。
 
 核心调用：
 

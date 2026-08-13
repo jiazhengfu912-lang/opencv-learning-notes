@@ -38,7 +38,7 @@
 python morphology_features.py
 ```
 
-脚本将 `images/test.jpg` 转成灰度图，创建两个椭圆结构元素：`5 × 5` 的 `edge_kernel` 用于形态学梯度，`15 × 15` 的 `hat_kernel` 用于礼帽与黑帽。输出显示原灰度图、梯度、礼帽和黑帽结果，并保存到 `output/`。
+脚本将 `images/basics/test.jpg` 转成灰度图，创建两个椭圆结构元素：`5 × 5` 的 `edge_kernel` 用于形态学梯度，`15 × 15` 的 `hat_kernel` 用于礼帽与黑帽。输出显示原灰度图、梯度、礼帽和黑帽结果，并保存到 `output/`。
 
 ## 参数速查与常见误区
 

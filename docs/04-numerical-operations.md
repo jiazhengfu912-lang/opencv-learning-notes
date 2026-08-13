@@ -53,7 +53,7 @@ python image_math.py
 
 `numeric_basics.py` 输出图像的尺寸、数据类型、最小值和最大值，并展示亮度与对比度变化。`image_math.py` 用 `np.full_like(image, 50)` 创建与原图同尺寸的常量图，再用 `cv2.add`、`cv2.subtract` 进行饱和加减。
 
-输入是 `images/test.jpg`；输出为多个对比窗口及保存到 `output/` 的图像结果。
+输入是 `images/basics/test.jpg`；输出为多个对比窗口及保存到 `output/` 的图像结果。
 
 ## 参数速查与常见误区
 
